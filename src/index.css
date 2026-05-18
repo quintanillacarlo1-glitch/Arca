@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+}
+
+/* Leaflet popup customization */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  padding: 0 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+}
+
+.leaflet-popup-close-button {
+  font-size: 24px !important;
+  padding: 4px 8px !important;
+  color: #6B7280 !important;
+}
+
+.leaflet-popup-close-button:hover {
+  color: #1F2937 !important;
+  background-color: #F3F4F6 !important;
+}
+
+.leaflet-popup-tip {
+  background: white !important;
+}
+
+.custom-warehouse-marker {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.custom-warehouse-marker:hover {
+  transform: scale(1.1);
+  z-index: 1000 !important;
+}
+
+.leaflet-container {
+  font-family: 'Inter', sans-serif !important;
+}
